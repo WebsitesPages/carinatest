@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vielen Dank für Ihre Anfrage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      background-color: #ead8d3;
+      color: #482a21;
+    }
+    .container {
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .counter {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Vielen Dank für Ihre Anfrage</h1>
+    <p>Ich habe Ihre Anfrage erhalten und werde mich so schnell wie möglich bei Ihnen melden.</p>
+    <div>
+      Sie werden in <span class="counter">5</span> Sekunden zurück zu <a href="https://www.missionfeelgood.de">www.missionfeelgood.de</a> weitergeleitet.
+    </div>
+  </div>
+  <script>
+    let counter = document.querySelector('.counter');
+    let countdown = 5;
+
+    const countdownInterval = setInterval(() => {
+      countdown--;
+      counter.textContent = countdown;
+
+      if (countdown === 0) {
+        clearInterval(countdownInterval);
+        window.location.href = "http://www.missionfeelgood.de";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
