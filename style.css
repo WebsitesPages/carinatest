@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'BOOWIE Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('BOOWIE Regular'), url('BOOWIE.woff') format('woff');
+    }
 *,
 *::before,
 *::after {
@@ -10,6 +16,7 @@
     --webas-font-size: calc(var(--praesision-font-size) / var(--golden-ratio));
     --kopf-font-size: calc(var(--webas-font-size) / (var(--golden-ratio) * 1.8));
     --royale-blue: #4169e1;
+    
 }
 @media (max-width: 768px) {
     :root {
@@ -22,7 +29,7 @@ html{
     padding: 0;
 }
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -251,18 +258,19 @@ display: none;
 
 
 .banner1{
-    min-height: 120vh;
+    min-height: 100vh;
     background-color: #f1ecec;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 50px; 
+    align-items: stretch;
+    padding: 3rem 50px; 
     position: relative;
+
 }
 
 .banner1 img {
     max-width: 40%;
+     object-fit: cover; /* Stellt sicher, dass das Bild seine Proportionen beibehält */
+    flex-shrink: 0;
 }
 
 .banner1 h1 {
@@ -270,9 +278,11 @@ display: none;
     margin-bottom: 20px; 
     text-align: left;
     color: #482a21;
+    font-family: "BOOWIE Regular";
 }
 .tc{
-    max-width: 80%;
+    width: 100%; 
+    text-align: center;
 }
 .banner1 h2 {
     font-size: 1.5em;
@@ -341,6 +351,108 @@ display: none;
     }
 }
 
+@media (max-width: 768px) {
+    .banner1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-containerA {
+        width: 100%;
+        max-width: none !important; 
+    }
+
+    .text-containerA h1, .text-containerA p {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .banner1 img {
+        max-width: 100%;
+    }
+}
+
+.text-container {
+    width: 60%; /* Sie können diese Breite nach Ihren Wünschen anpassen */
+    max-width: 1200px;
+    margin: 1rem auto;
+    text-align: left;
+}
+
+.text-containerA{
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Zentriert den Inhalt vertikal */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Fügt einen Schatten hinzu */
+    border-radius: 8px; /* Rundet die Ecken ab */
+    padding: 20px; /* Fügt etwas Innenabstand hinzu */
+    background-color: #f5f2f2; /* Hintergrundfarbe */
+    max-width: 50%;
+    flex: 1;
+    align-items: center;
+}
+
+
+.text-containerA h1{
+    text-align: center;
+}
+.text-containerA p{
+    text-align: center;
+}
+.text-container p {
+    font-size: 1.3em;
+    line-height: 1.6;
+    text-align: left; /* Ausrichtung des Textes: linksbündig, aber voll ausgerichtet */
+}
+
+
+
+
+.text-container h2{
+    font-size: 1.6rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+
+@media (max-width: 768px) {
+    
+    
+    .text-container {
+        width: 80%;
+    }
+
+    .banner2 h1 {
+        font-size: 3em;
+        padding: 4rem 20px 0 20px;
+        text-align: center;
+    }
+    .banner1 h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px; 
+    }
+    .banner2 p {
+        font-size: 1.5em;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .banner2 h1 {
+        font-size: 2em;
+    }
+
+    .banner2 h2 {
+        font-size: 1.6rem;
+
+    }
+    
+}
+
+
+
+
 
 
 
@@ -351,6 +463,13 @@ display: none;
     width: 100%;
     min-height: 50vh;
     overflow: hidden;
+
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 80%;
+    background-color:#f5f2f2; /* oder eine andere Farbe deiner Wahl */
 }
 .centered-text {
     width: 100%;
@@ -451,7 +570,9 @@ display: none;
     }
     .centered-text p{
         font-size: 16px !important;
-      
+        max-width: 100% !important;  /* Überschreibe die max-width Regel */
+        width: 80% !important;  /* Setze die Breite auf 100% */
+        margin: 0 auto;  /* Zentriert den Text */
     }
     .pagination-dot{
         width: 6px;
@@ -482,6 +603,7 @@ display: none;
     padding: 4rem 2rem 2rem 2rem;
     font-size: 2.7em;
     color: #321d17;
+    font-family: 'BOOWIE Regular';
 }
 
 .container {
@@ -518,12 +640,20 @@ display: none;
 }
 
 .box p {
-    text-align: left;
+    text-align: center;
     font-size: 1.3em;
     height: 60%; /* New */
     overflow: auto; /* New */
-    padding: 0 1rem 0 1rem;
+    padding: 1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Fügt einen Schatten hinzu */
+    border-radius: 8px; /* Rundet die Ecken ab */
+    background-color: #f5f2f2; /* Hintergrundfarbe */
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .box img {
     width: 100%;
@@ -531,62 +661,9 @@ display: none;
     height: auto;
 }
 
-.text-container {
-    width: 60%; /* Sie können diese Breite nach Ihren Wünschen anpassen */
-    max-width: 1200px;
-    margin: 1rem auto;
-    text-align: left;
-
-}
-.text-container p {
-    font-size: 1.3em;
-    line-height: 1.6;
-    text-align: left; /* Ausrichtung des Textes: linksbündig, aber voll ausgerichtet */
-}
 
 
 
-
-.text-container h2{
-    font-size: 1.6rem;
-    line-height: 1.6;
-    text-align: left;
-}
-
-
-@media (max-width: 768px) {
-    
-    
-    .text-container {
-        width: 80%;
-    }
-
-    .banner2 h1 {
-        font-size: 3em;
-        padding: 4rem 20px 0 20px;
-        text-align: center;
-    }
-    .banner1 h2 {
-        font-size: 1.5rem;
-        margin-bottom: 20px; 
-    }
-    .banner2 p {
-        font-size: 1.5em;
-    }
-    
-}
-
-@media (max-width: 600px) {
-    .banner2 h1 {
-        font-size: 2em;
-    }
-
-    .banner2 h2 {
-        font-size: 1.6rem;
-
-    }
-    
-}
 
 .banner3 {
     min-height: 80vh;
