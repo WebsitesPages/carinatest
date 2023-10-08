@@ -99,33 +99,72 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 
-// Die Optionen für den Intersection Observer
+
+
 let options = {
     root: null,
     rootMargin: '0px',
     threshold: 0.20
 };
 
-// Der Callback für den Intersection Observer
 let callback = (entries, observer) => {
     entries.forEach(entry => {
-        // Wenn das Element zu mindestens 20% sichtbar ist
         if (entry.isIntersecting) {
-            // Füge die Klasse "visible" hinzu
             entry.target.classList.add('visible');
-            // Das Element muss nicht weiter beobachtet werden, also entferne es vom Observer
             observer.unobserve(entry.target);
+
+            let pElement = entry.target.querySelector('.ramo');
+            if (pElement) {
+                let originalHTML = pElement.innerHTML;
+                let div = document.createElement('div');
+                div.innerHTML = originalHTML;
+
+                let index = 0;
+                let textNodes = Array.from(div.childNodes);
+                pElement.innerHTML = '';
+
+                function typeText() {
+                    if (index < textNodes.length) {
+                        let node = textNodes[index];
+                        if (node.nodeType === 3) { // Text node
+                            let text = node.nodeValue;
+                            let textIndex = 0;
+
+                            function typeSubText() {
+                                if (textIndex < text.length) {
+                                    pElement.appendChild(document.createTextNode(text[textIndex]));
+                                    textIndex++;
+                                    setTimeout(typeSubText, 1);
+                                } else {
+                                    index++;
+                                    typeText();
+                                }
+                            }
+
+                            typeSubText();
+                        } else { // HTML element like <br>
+                            pElement.appendChild(node.cloneNode(true));
+                            index++;
+                            setTimeout(typeText, 1);
+                        }
+                    }
+                }
+
+                typeText();
+            }
         }
     });
 };
 
-// Erstelle den Intersection Observer
 let observer = new IntersectionObserver(callback, options);
 
-// Beobachte alle Elemente mit der Klasse "obser"
 document.querySelectorAll('.obser').forEach(elem => {
     observer.observe(elem);
 });
+
+
+
+
 
 
 //Welchselnder Text am Anfang
