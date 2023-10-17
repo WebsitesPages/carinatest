@@ -712,7 +712,16 @@ img{
     align-items: center;
 }
 
+@media (max-width: 768px) {
+    img {
+        width: 400px; /* Verkleinern Sie die Bildbreite */
+        height: 40%;  /* Verkleinern Sie die Bildhöhe */
+    }
 
+    .scroll_section {
+        padding: 0 0vw; /* Erhöhen Sie den seitlichen Abstand */
+    }
+}
 
 
 
