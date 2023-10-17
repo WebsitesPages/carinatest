@@ -445,6 +445,11 @@ display: none;
         padding: 4rem 20px 0 20px;
         text-align: center;
     }
+    .test h1{
+        font-size: 3em;
+        padding: 4rem 20px 0 20px;
+        text-align: center;
+    }
     .banner1 h2 {
         font-size: 1.5rem;
         margin-bottom: 20px; 
@@ -452,11 +457,17 @@ display: none;
     .banner2 p {
         font-size: 1.5em;
     }
+    .img-container p{
+        font-size: 1.5eem;
+    }
     
 }
 
 @media (max-width: 600px) {
     .banner2 h1 {
+        font-size: 2em;
+    }
+    .test h1{
         font-size: 2em;
     }
 
@@ -604,11 +615,25 @@ display: none;
 
 
 .test {
-    height: 50vh;
+    min-height: 10vh;
+    background-color: #ede5e5;
+    border:  #ede5e5 solid 1px;
+    font-family: 'Raleway', sans-serif;
+    display: flex; /* Hinzugefügt */
+    align-items: center; /* Hinzugefügt */
+    justify-content: center; /* Hinzugefügt */
+    overflow:visible; /* Hinzugefügt */
+
 }
 
-.test h1{
+.test h1 {
     font-size: 4rem;
+    font-family: "BOOWIE Regular";
+    margin-top: 3rem;
+    text-align: center;
+    padding: 4rem 2rem 2rem 2rem;
+    font-size: 2.7em;
+    color: #321d17;
 }
 .test p{
     width: 50%;
@@ -616,7 +641,12 @@ display: none;
 }
 
 .containtertest{
-    padding: 5rem;
+    padding: 0rem;
+    background-color: #ede5e5;
+    width: 100%; /* Hinzugefügt */
+    display: flex; /* Hinzugefügt */
+    justify-content: center; /* Hinzugefügt */
+    align-items: center; /* Hinzugefügt */
 }
 .sticky_parent{
     height: 300vh;
@@ -628,6 +658,7 @@ display: none;
     height: 100vh;
 }
 .scroll_section{
+    background-color: #ede5e5;
     position: absolute;
     top: 0;
     height: 100%;
@@ -641,10 +672,11 @@ display: none;
 
 
 img{
-    width: 400px;
-    height: 80%;
+    width: 600px;
+    height: 60%;
     object-fit: cover;
     object-position: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .img-container {
@@ -654,17 +686,30 @@ img{
     justify-content: center;
     width: 100vw;
     padding: 1rem;
+    font-family: 'Raleway', sans-serif;
+
 }
 
 .img-container h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
+    font-family: 'Raleway', sans-serif;
 }
 
 .img-container p {
     margin-bottom: 1rem;
     text-align: center;
-    width: 80%;
+    font-size: 1.3em;
+    height: 60%; /* New */
+    overflow: auto; /* New */
+    padding: 1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Fügt einen Schatten hinzu */
+    border-radius: 8px; /* Rundet die Ecken ab */
+    background-color: #f5f2f2; /* Hintergrundfarbe */
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
