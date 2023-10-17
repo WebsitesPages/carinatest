@@ -302,7 +302,10 @@ window.addEventListener('scroll', (e) => {
     for(let i = 0; i < stickySections.length; i++){
         transform(stickySections[i]);
     }
+
 });
+
+
 
 
 function transform(section){

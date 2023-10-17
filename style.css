@@ -379,6 +379,9 @@ display: none;
     max-width: 1200px;
     margin: 1rem auto;
     text-align: left;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Fügt einen Schatten hinzu */
+    border-radius: 8px; /* Rundet die Ecken ab */
+    background-color: #f5f2f2; /* Hintergrundfarbe */
 }
 
 .text-containerA{
@@ -402,10 +405,14 @@ display: none;
 .text-containerA p{
     text-align: center;
 }
+
 .text-container p {
     font-size: 1.3em;
     line-height: 1.6;
-    text-align: left; /* Ausrichtung des Textes: linksbündig, aber voll ausgerichtet */
+    text-align: center; /* Ausrichtung des Textes: linksbündig, aber voll ausgerichtet */
+    width: 80%;
+    margin: 1rem auto;
+
 }
 
 @media (max-width: 600px) {
@@ -447,7 +454,6 @@ display: none;
     }
     .test h1{
         font-size: 3em;
-        
         text-align: center;
     }
     .banner1 h2 {
@@ -468,7 +474,7 @@ display: none;
         font-size: 2em;
     }
     .test h1{
-        font-size: 2em;
+        font-size: 1.8em ; 
     }
 
     .banner2 h2 {
@@ -622,8 +628,8 @@ display: none;
     display: flex; /* Hinzugefügt */
     align-items: center; /* Hinzugefügt */
     justify-content: center; /* Hinzugefügt */
-    overflow:visible; /* Hinzugefügt */
 
+    
 }
 
 .test h1 {
@@ -631,10 +637,10 @@ display: none;
     font-family: "BOOWIE Regular";
     margin-top: 3rem;
     text-align: center;
-   
+    /* padding: 4rem 2rem 2rem 2rem; */
     font-size: 2.7em;
     color: #321d17;
-      box-sizing: border-box;
+    box-sizing: border-box;
 }
 .test p{
     width: 50%;
@@ -651,12 +657,14 @@ display: none;
 }
 .sticky_parent{
     height: 300vh;
+
 }
 .stickytest{
     overflow: hidden;
     position: sticky;
     top: 0;
     height: 100vh;
+
 }
 .scroll_section{
     background-color: #ede5e5;
@@ -669,6 +677,7 @@ display: none;
     justify-content: space-between;
     align-items: center;
     padding: 0 5vw;
+
 }
 
 
@@ -678,6 +687,7 @@ img{
     object-fit: cover;
     object-position: center;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+
 }
 
 .img-container {
@@ -695,6 +705,7 @@ img{
     font-size: 2rem;
     margin-bottom: 1rem;
     font-family: 'Raleway', sans-serif;
+    
 }
 
 .img-container p {
@@ -720,7 +731,7 @@ img{
     }
 
     .scroll_section {
-        padding: 0 0vw; /* Erhöhen Sie den seitlichen Abstand */
+       width: 500vw;
     }
 }
 
