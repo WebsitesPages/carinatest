@@ -620,7 +620,7 @@ display: none;
 
 
 
-.test {
+  .test {
     min-height: 10vh;
     background-color: #ede5e5;
     border:  #ede5e5 solid 1px;
@@ -628,8 +628,8 @@ display: none;
     display: flex; /* Hinzugefügt */
     align-items: center; /* Hinzugefügt */
     justify-content: center; /* Hinzugefügt */
+    overflow:visible; /* Hinzugefügt */
 
-    
 }
 
 .test h1 {
@@ -731,7 +731,8 @@ img{
     }
 
     .scroll_section {
-       width: 500vw;
+        padding: 0 0vw; /* Erhöhen Sie den seitlichen Abstand */
+
     }
 }
 
