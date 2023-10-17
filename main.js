@@ -262,3 +262,64 @@ window.addEventListener('resize', () => {
   calculateMaxHeight();
 });
 });
+
+
+
+
+
+
+const stickySections = [...document.querySelectorAll('.stickytest') ]
+let images =[
+    "Carina.jpg",
+    "BlumenCarina.jpg",
+    "Essen.webp"
+]
+
+images.forEach (img => {
+    stickySections.forEach(section=> {
+
+
+          // Erstellen Sie ein div-Element als Container
+          let containerDiv = document.createElement('div');
+          containerDiv.className = 'img-container';
+  
+          // Erstellen Sie die Überschrift und den Text
+          let heading = document.createElement('h1');
+          heading.innerText = "Nahrung fühlen";
+          let text = document.createElement('p');
+            text.innerHTML = `Ihre Körpersignale wahrnehmen, fühlen, was Ihnen wirklich gut tut?<br><br>
+                            Vielleicht weniger Zucker?<br>
+                            Mehr frische Lebensmittel zu sich nehmen?<br>
+                            Vielleicht sogar ohne tierische Produkte glücklich und satt?<br>
+                            Oder einfach nur kleinere Portionen essen?`;
+  
+          // Erstellen Sie das Bild
+          let image = document.createElement('img');
+          image.src = img;
+  
+          // Fügen Sie die Überschrift, den Text und das Bild dem Container hinzu
+          containerDiv.appendChild(heading);
+          containerDiv.appendChild(text);
+          containerDiv.appendChild(image);
+  
+          // Fügen Sie den Container dem scroll_section-Element hinzu
+          section.querySelector(".scroll_section").appendChild(containerDiv);
+    })
+})
+
+
+window.addEventListener('scroll', (e) => {
+    for(let i = 0; i < stickySections.length; i++){
+    transform(stickySections[i])
+    }
+})
+
+
+function transform(section){
+    const offsetTop = section.parentElement.offsetTop;
+    const scrollSection = section.querySelector('.scroll_section');
+
+    let percentage = ((window.scrollY - offsetTop) / window.innerHeight) * 100;
+    percentage = percentage < 0 ? 0 : percentage > 400 ? 400 : percentage; 
+    scrollSection.style.transform = `translate3d(${-(percentage)}vw, 0, 0)`
+}

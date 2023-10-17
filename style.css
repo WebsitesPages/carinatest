@@ -603,6 +603,75 @@ display: none;
 
 
 
+.test {
+    height: 50vh;
+}
+
+.test h1{
+    font-size: 4rem;
+}
+.test p{
+    width: 50%;
+    margin: 2rem 0;
+}
+
+.containtertest{
+    padding: 5rem;
+}
+.sticky_parent{
+    height: 300vh;
+}
+.stickytest{
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+.scroll_section{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 300vw;
+    will-change: transform;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+}
+
+
+img{
+    width: 400px;
+    height: 80%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    padding: 1rem;
+}
+
+.img-container h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.img-container p {
+    margin-bottom: 1rem;
+    text-align: center;
+    width: 80%;
+}
+
+
+
+
+
+
 
 
 
@@ -633,7 +702,23 @@ display: none;
     padding: 2rem 0 2rem 0;
     
 }
-
+.container {
+    position: relative;
+  }
+  
+  .container.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .scroll-box {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+  
 .box {
     flex: 1 1 300px;
     height: 100%;
