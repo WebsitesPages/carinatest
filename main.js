@@ -270,7 +270,6 @@ window.addEventListener('resize', () => {
 
 const stickySections = [...document.querySelectorAll('.stickytest')];
 let images =[
- 
 ]
 
 images.forEach (img => {

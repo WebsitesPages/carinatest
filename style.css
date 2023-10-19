@@ -321,6 +321,14 @@ display: none;
 
         text-align: center;
     }
+
+    .banner3 h1 {
+        font-size: 3em;
+
+        text-align: center;
+    }
+
+
     .banner1 h3 {
         font-size: 1.3rem;
         margin-bottom: 20px;
@@ -328,6 +336,9 @@ display: none;
         color: #482a21; 
     }
     .banner1 p {
+        font-size: 1.3em;
+    }
+    .banner3 p {
         font-size: 1.3em;
     }
     .banner1 img {
@@ -340,6 +351,11 @@ display: none;
 
 @media (max-width: 600px) {
     .banner1 h1 {
+        font-size: 1.7rem;
+        padding: 2rem 0rem;
+        text-align: center;
+    }
+    .banner3 h1 {
         font-size: 1.7rem;
         padding: 2rem 0rem;
         text-align: center;
@@ -643,8 +659,10 @@ display: none;
     box-sizing: border-box;
 }
 .test p{
-    width: 50%;
-    margin: 2rem 0;
+    width: 70%;
+    text-align: center;
+    margin: 2rem auto;
+    box-sizing: border-box;
 }
 
 .containtertest{
@@ -722,6 +740,9 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.text-scroll .img-container {
+    width: 75vw;
 }
 
 @media (max-width: 768px) {
@@ -836,25 +857,28 @@ img{
 
 
 
-.banner3 {
-    min-height: 80vh;
+.banner3{
+    min-height: 100vh;
     background-color: #f1ecec;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #482a21;
+    flex-direction: column;
+    padding: 3rem 50px; 
+    position: relative;
 }
 
 .banner3 h1 {
-    text-align: center;
-    margin: 0;
-    padding: 4rem 2rem 2rem 2rem;
-    font-size: 3em;
-    color: #321d17;
+    font-size: 2.6em;
+    margin-bottom: 20px; 
+    text-align: left;
+    color: #482a21;
+    font-family: "BOOWIE Regular";
 }
-.banner3 h2{
-    text-align: center;
+.banner1 p {
+    font-size: 1.5em;
+    text-align: left;
+    color: #482a21;
 }
 .download-button {
     display: inline-block;
