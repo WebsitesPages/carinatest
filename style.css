@@ -498,7 +498,7 @@ display: none;
 
     }
     .banner1 h1, .banner1 p, .banner1 a {
-        color: white; /* Textfarbe wird auf Weiß gesetzt */
+        color: white !important; /* Textfarbe wird auf Weiß gesetzt */
     }
 }
 
