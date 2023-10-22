@@ -490,6 +490,11 @@ display: none;
         padding: 4rem 20px 0 20px;
         text-align: center;
     }
+    .banner2 h2{
+        font-size: 3em;
+        padding: 4rem 20px 0 20px;
+        text-align: center;
+    }
     .test h1{
         font-size: 3em;
         text-align: center;
@@ -516,9 +521,9 @@ display: none;
     }
 
     .banner2 h2 {
-        font-size: 1.6rem;
-
+        font-size: 2rem !important;
     }
+
     .banner1 h1, .banner1 p, .banner1 a {
         color: white !important; /* Textfarbe wird auf Weiß gesetzt */
     }
@@ -803,6 +808,14 @@ img{
     color: #321d17;
     font-family: 'BOOWIE Regular';
 }
+.banner2 h2 {
+    font-size: 2.7rem;
+    text-align: center;
+    margin: 0;
+    color: #321d17;
+    font-family: 'BOOWIE Regular';
+    padding-bottom: 4rem;
+}
 
 .container {
     display: flex;
@@ -922,7 +935,21 @@ img{
     background-size: cover;
 }
 
+.parallax-section2 {
+    height: 40vh;
+    overflow: hidden;
+    position: relative;
 
+    width: 100vw;
+}
+
+.parallax-image2 {
+    background-image: url('Stuhl');
+    height: 40vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 
 
