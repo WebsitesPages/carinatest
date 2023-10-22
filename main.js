@@ -316,3 +316,10 @@ function transform(section){
     percentage = percentage < 0 ? 0 : percentage > maxPercentage ? maxPercentage : percentage; 
     scrollSection.style.transform = `translate3d(${-(percentage)}vw, 0, 0)`;
 }
+
+
+window.addEventListener('scroll', function() {
+    const parallax = document.querySelector('.parallax-image');
+    const scrolled = window.scrollY;
+    parallax.style.transform = 'translateY(' + (scrolled * 0.1) + 'px)'; // 0.5 bestimmt die Geschwindigkeit des Parallax-Effekts
+});

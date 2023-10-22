@@ -340,6 +340,7 @@ display: none;
     }
     .banner3 p {
         font-size: 1.3em;
+        
     }
     .banner1 img {
         max-width: 50%;
@@ -356,9 +357,10 @@ display: none;
         text-align: center;
     }
     .banner3 h1 {
-        font-size: 1.7rem;
+        font-size: 1.3rem;
         padding: 2rem 0rem;
         text-align: center;
+
     }
     .banner1 img {
         max-width: 70%;
@@ -413,7 +415,15 @@ display: none;
     flex: 1;
     align-items: center;
 }
-
+.text-containerB {
+    width: 60%; /* Sie können diese Breite nach Ihren Wünschen anpassen */
+    max-width: 1200px;
+    margin: 1rem auto;
+    text-align: left;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Fügt einen Schatten hinzu */
+    border-radius: 8px; /* Rundet die Ecken ab */
+    background-color: #f5f2f2; /* Hintergrundfarbe */
+}
 
 .text-containerA h1{
     text-align: center;
@@ -430,7 +440,14 @@ display: none;
     margin: 1rem auto;
 
 }
+.text-containerB p {
+    font-size: 1.3em;
+    line-height: 1.6;
+    text-align: center; /* Ausrichtung des Textes: linksbündig, aber voll ausgerichtet */
+    width: 80%;
+    margin: 1rem auto;
 
+}
 @media (max-width: 600px) {
     .bg-image {
         background-image: url('BlumenCarina.jpg');
@@ -460,8 +477,13 @@ display: none;
     
     
     .text-container {
-        width: 80%;
+        width: 80% !important;
     }
+    .text-containerB {
+        width: 100% !important;
+        text-align: center;
+    }
+    
 
     .banner2 h1 {
         font-size: 3em;
@@ -776,7 +798,7 @@ img{
 .banner2 h1 {
     text-align: center;
     margin: 0;
-    padding: 4rem 2rem 2rem 2rem;
+     padding: 4rem 0rem 2rem 0rem; 
     font-size: 2.7em;
     color: #321d17;
     font-family: 'BOOWIE Regular';
@@ -866,6 +888,7 @@ img{
     flex-direction: column;
     padding: 3rem 50px; 
     position: relative;
+    overflow: hidden;
 }
 
 .banner3 h1 {
@@ -874,12 +897,36 @@ img{
     text-align: left;
     color: #482a21;
     font-family: "BOOWIE Regular";
+    text-align: center;
 }
 .banner3 p {
     font-size: 1.5em;
     text-align: left;
     color: #482a21;
 }
+
+.parallax-section {
+    height: 30vh;
+    overflow: hidden;
+    position: relative;
+
+    width: 100vw;
+}
+
+.parallax-image {
+    background-image: url('Schimmer');
+    height: 30vh;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+
 .download-button {
     display: inline-block;
     background-color: #7c6767;
