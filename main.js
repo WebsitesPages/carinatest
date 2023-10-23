@@ -328,3 +328,8 @@ window.addEventListener('scroll', function() {
     const scrolled = window.scrollY;
     parallax.style.transform = 'translateY(' + (scrolled * 0.2) + 'px)'; // 0.5 bestimmt die Geschwindigkeit des Parallax-Effekts
 });
+window.addEventListener('scroll', function() {
+    const parallax = document.querySelector('.parallax-image3');
+    const scrolled = window.scrollY;
+    parallax.style.transform = 'translateY(' + (scrolled * 0.3) + 'px)'; // 0.5 bestimmt die Geschwindigkeit des Parallax-Effekts
+});
