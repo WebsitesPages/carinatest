@@ -357,7 +357,7 @@ display: none;
         text-align: center;
     }
     .banner3 h1 {
-        font-size: 1.3rem;
+        font-size: 2.2rem !important;
         padding: 2rem 0rem;
         text-align: center;
 
@@ -370,7 +370,14 @@ display: none;
  
     }
 }
+@media (max-width: 400px) {
+    .banner3 h1 {
+        font-size: 1.5rem !important;
+        padding: 2rem 0rem;
+        text-align: center;
 
+    }
+}
 @media (max-width: 768px) {
     .banner1 {
         flex-direction: column;
@@ -966,7 +973,21 @@ img{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.parallax-section4 {
+    height: 40vh;
+    overflow: hidden;
+    position: relative;
 
+    width: 100vw;
+}
+
+.parallax-image4 {
+    background-image: url('Downy');
+    height: 40vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 
 .download-button {
@@ -1131,6 +1152,7 @@ footer{
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
     margin-top: 2rem;
+   font-family: 'Montserrat', Arial, sans-serif;
 }
 
 .appointment-form h2 {
@@ -1361,3 +1383,5 @@ footer{
 .visible {
     opacity: 1 !important;
 }
+
+  
