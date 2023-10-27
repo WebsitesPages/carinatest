@@ -125,6 +125,10 @@ header {
 }
 
 /**/
+.no-scroll {
+    overflow: hidden;
+    height: 100%; /* Dies verhindert das Scrollen auf einigen mobilen Geräten */
+}
 
 /*Hamburger Header*/
 .menu-icon {
@@ -175,9 +179,8 @@ header {
     }
       
     .menu.active {
-        opacity: 0.9;
-
-        pointer-events: auto; /* Fügen Sie diese Zeile hinzu */
+        opacity: 1 !important;
+        pointer-events: auto;
     }
       
     .menu ul {
