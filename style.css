@@ -181,6 +181,7 @@ header {
     .menu.active {
         opacity: 1 !important;
         pointer-events: auto;
+
     }
       
     .menu ul {
@@ -360,7 +361,7 @@ display: none;
         text-align: center;
     }
     .banner3 h1 {
-        font-size: 2.2rem !important;
+        font-size: 2.4rem !important;
         padding: 2rem 0rem;
         text-align: center;
 
@@ -539,7 +540,7 @@ display: none;
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     .text-containerB{
         
         width: 100% !important;

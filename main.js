@@ -178,7 +178,7 @@ slantedContainers.forEach(container => {
     const texts = container.querySelectorAll('.centered-text');
     const dots = container.querySelectorAll('.pagination-dot');
     let currentIndex = 0;
-    let timer = setInterval(slideTexts, 10000);
+    let timer = setInterval(slideTexts, 10000000);
     let touchStartX = 0;
     let touchEndX = 0;
     let touchStartY = 0;
@@ -213,7 +213,7 @@ slantedContainers.forEach(container => {
         currentIndex = (currentIndex + 1) % texts.length;
         texts[currentIndex].classList.add('active');
         dots[currentIndex].classList.add('active');
-        timer = setInterval(slideTexts, 6000);
+        timer = setInterval(slideTexts, 10000000);
     }
 
     function slidePreviousTexts() {
@@ -223,7 +223,7 @@ slantedContainers.forEach(container => {
         currentIndex = (currentIndex - 1 + texts.length) % texts.length;
         texts[currentIndex].classList.add('active');
         dots[currentIndex].classList.add('active');
-        timer = setInterval(slideTexts, 10000);
+        timer = setInterval(slideTexts, 10000000);
     }
 
     container.addEventListener('touchstart', function(event) {
@@ -259,7 +259,7 @@ slantedContainers.forEach(container => {
             currentIndex = index;
             texts[currentIndex].classList.add('active');
             dots[currentIndex].classList.add('active');
-            timer = setInterval(slideTexts, 10000);
+            timer = setInterval(slideTexts, 10000000);
         });
     });
 window.addEventListener('resize', () => {
