@@ -708,6 +708,7 @@ display: none;
     font-size: 2.7em;
     color: #321d17;
     box-sizing: border-box;
+
 }
 .test p{
     width: 70%;
@@ -794,6 +795,9 @@ img{
 }
 .text-scroll .img-container {
     width: 75vw;
+}
+.stickytest .scroll_section .img-container:first-child {
+    margin-top: 0;
 }
 
 @media (max-width: 768px) {

@@ -170,7 +170,7 @@ document.querySelectorAll('.obser').forEach(elem => {
 
 
 
-
+document.addEventListener('DOMContentLoaded', (event) => {
 //Welchselnder Text am Anfang
 const slantedContainers = document.querySelectorAll('.banner2');
 
@@ -268,7 +268,7 @@ window.addEventListener('resize', () => {
 });
 
 
-
+});
 
 
 
